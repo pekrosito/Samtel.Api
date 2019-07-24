@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0287C042-E437-4715-80BF-327A59001261}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Samtel.Application</RootNamespace>
+    <AssemblyName>Samtel.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Common">
+      <HintPath>..\packages\System.Web.Http.Common.4.0.20126.16343\lib\net40\System.Web.Http.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationServicesProvider\SecurityService.cs" />
+    <Compile Include="ApplicationServices\DTOs\ExampleDTO.cs" />
+    <Compile Include="ApplicationServicesProvider\Assemblers\DTOAssembler.cs" />
+    <Compile Include="ApplicationServicesProvider\Assemblers\ModelAssembler.cs" />
+    <Compile Include="ApplicationServicesProvider\ExampleServices.cs" />
+    <Compile Include="ApplicationServices\DTOs\SessionDTO.cs" />
+    <Compile Include="ApplicationServices\IExampleAplicationService.cs" />
+    <Compile Include="ApplicationServices\ISecurityService.cs" />
+    <Compile Include="BusinessService\IParameterRepository.cs" />
+    <Compile Include="BusinessService\IUserRepository.cs" />
+    <Compile Include="DelegateService.cs" />
+    <Compile Include="BusinessService\Base\IContext.cs" />
+    <Compile Include="BusinessService\Base\IRepository.cs" />
+    <Compile Include="BusinessService\Base\IUnitOfwork.cs" />
+    <Compile Include="BusinessService\IExampleRepository.cs" />
+    <Compile Include="Exceptions\AuthenticationException.cs" />
+    <Compile Include="Exceptions\AutorizationException.cs" />
+    <Compile Include="Exceptions\BaseException.cs" />
+    <Compile Include="Exceptions\ErrorTypes.cs" />
+    <Compile Include="Exceptions\ISamtelException.cs" />
+    <Compile Include="Exceptions\NotFoundException.cs" />
+    <Compile Include="Exceptions\TransactionException.cs" />
+    <Compile Include="IConfigurationManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestContext.cs" />
+    <Compile Include="ServiceAgents\IAuthentication.cs" />
+    <Compile Include="ServiceAgents\IDistribuitedCacheService.cs" />
+    <Compile Include="ServiceAgents\ILocalCacheService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Samtel.Domain\Samtel.Domain.csproj">
+      <Project>{16997158-dd27-40d4-afa7-ac9297bf4cba}</Project>
+      <Name>Samtel.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samtel.Resources\Samtel.Resources.csproj">
+      <Project>{44519619-5f83-425f-9774-f40c0d1d2d2f}</Project>
+      <Name>Samtel.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
