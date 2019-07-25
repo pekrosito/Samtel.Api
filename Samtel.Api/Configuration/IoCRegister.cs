@@ -5,7 +5,6 @@ using Ninject.Web.Common;
 using Samtel.Application.ApplicationServices;
 using Samtel.Application;
 using Samtel.Persistence.Dapper;
-using Samtel.Application.BusinessService;
 using Samtel.Application.BusinessService.Base;
 using Samtel.Persistence.BusinessServiceProvider;
 using Samtel.Application.ApplicationServicesProvider;
@@ -13,6 +12,7 @@ using Samtel.Persistence.BusinessServiceProvider.Base;
 using Samtel.Application.ServiceAgents;
 using Samtel.Infraestructure.Security.Token;
 using Samtel.Infraestructure.CacheServices;
+using Samtel.Application.BusinessService;
 
 namespace Samtel.Api.Configuration
 {
@@ -40,7 +40,7 @@ namespace Samtel.Api.Configuration
 
             kernel.Bind(typeof(IRepository<>)).To(typeof(RepositoryBase<>)).InRequestScope();
             kernel.Bind<IExampleRepository>().To<ExampleRepository>().InRequestScope();
-            //kernel.Bind<IParameterRepository>().To<Persistence.Dapper.Repositories.ParameterRepository>();
+            kernel.Bind<IParameterRepository>().To<Samtel.Persistence.BusinessServiceProvider.ParameterRepository>();
         }
 
         private static void RegisterModelService(IKernel kernel)

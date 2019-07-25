@@ -1,4 +1,4 @@
-﻿//using Abastible.Sge.Application.Model;
+﻿//using Samtel.Application.Model;
 
 namespace Samtel.Application
 {

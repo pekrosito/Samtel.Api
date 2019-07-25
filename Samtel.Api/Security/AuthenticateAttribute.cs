@@ -9,7 +9,7 @@ using System.Web.Http.Results;
 using Microsoft.Practices.ServiceLocation;
 using Samtel.Application.Exceptions;
 using Samtel.Application.ApplicationServices;
-//using Abastible.Sge.Infrastructure.Common.Log;
+//using Samtel.Infrastructure.Common.Log;
 
 namespace Samtel.Api.Security
 {

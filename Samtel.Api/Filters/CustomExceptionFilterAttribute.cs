@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Samtel.Application.Exceptions;
 using Samtel.Domain.Models.Base;
-//using Abastible.Sge.Infrastructure.Common.Log;
+//using Samtel.Infrastructure.Common.Log;
 
 namespace Samtel.Api.Filters
 {

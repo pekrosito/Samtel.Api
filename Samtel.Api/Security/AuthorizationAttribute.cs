@@ -4,7 +4,7 @@ using System.Web.Http;
 using System.Web.Http.Controllers;
 using Microsoft.Practices.ServiceLocation;
 using Samtel.Application.ApplicationServices;
-//using Abastible.Sge.Infrastructure.Common.Log;
+//using Samtel.Infrastructure.Common.Log;
 
 namespace Samtel.Api.Security
 {

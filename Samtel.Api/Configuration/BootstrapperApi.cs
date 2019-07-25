@@ -3,7 +3,7 @@ using FluentValidation.WebApi;
 using Microsoft.Practices.ServiceLocation;
 using Ninject;
 using Samtel.Api.Jobs;
-//using Abastible.Sge.Infrastructure.Common.Log;
+//using Samtel.Infrastructure.Common.Log;
 using Samtel.Persistence.Dapper;
 
 namespace Samtel.Api.Configuration

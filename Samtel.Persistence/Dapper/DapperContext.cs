@@ -30,7 +30,7 @@ namespace Samtel.Persistence.Dapper
 
         public DapperContext()
         {
-           // _connectionString = ConfigurationManager.ConnectionStrings["Samtel"].ConnectionString;
+           _connectionString = ConfigurationManager.ConnectionStrings["SGE"].ConnectionString;
         }
 
         public DapperContext(string connectionString)

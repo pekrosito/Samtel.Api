@@ -40,6 +40,7 @@
       <HintPath>..\packages\DapperExtensions.1.6.3\lib\net45\DapperExtensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,7 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dapper\Class1.cs" />
+    <Compile Include="BusinessServiceProvider\ParameterRepository.cs" />
+    <Compile Include="BusinessServiceProvider\PersonRepository.cs" />
     <Compile Include="Dapper\ConfigurationDapper.cs" />
     <Compile Include="Dapper\DapperContext.cs" />
     <Compile Include="BusinessServiceProvider\Base\RepositoryBase.cs" />
