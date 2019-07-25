@@ -24,6 +24,14 @@ namespace Samtel.Api.Configuration
             return ConfigurationManager.AppSettings["Office:urlBase"];
         }
         
+         public int GetMinutesForDurationToken(SystemType system)
+        {
+            switch (system)
+            {
+                case SystemType.Desktop: return 60;//int.Parse(_parameterRepository.GetValue("session:Office:minutesDurationToken"));
+                default: return 0;
+            }
+        }
         /*
         public string GetSmsUserName()
         {

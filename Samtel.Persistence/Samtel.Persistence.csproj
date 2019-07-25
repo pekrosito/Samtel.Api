@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="BusinessServiceProvider\ParameterRepository.cs" />
     <Compile Include="BusinessServiceProvider\PersonRepository.cs" />
+    <Compile Include="BusinessServiceProvider\UserRepository.cs" />
     <Compile Include="Dapper\ConfigurationDapper.cs" />
     <Compile Include="Dapper\DapperContext.cs" />
     <Compile Include="BusinessServiceProvider\Base\RepositoryBase.cs" />

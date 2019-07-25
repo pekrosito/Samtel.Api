@@ -45,8 +45,7 @@ namespace Samtel.Api.Filters
                     statusCode = (HttpStatusCode)463;*/
 
                 //log.Warn(((Exception)exception).Message, (Exception)exception);
-                //Create(exception, ((Exception)exception).Message)
-                var resp = actionExecutedContext.Request.CreateErrorResponse(statusCode, "");
+                var resp = actionExecutedContext.Request.CreateErrorResponse(statusCode, Create(exception, ((Exception)exception).Message));
                 actionExecutedContext.Response = resp;
             }
             else

@@ -13,7 +13,7 @@ namespace Samtel.Api.Services.v1
 {
     [RoutePrefix("v1/test")]
     [Authenticate]
-    [Authorization]
+    //[Authorization]
     public class ExampleController : ApiController
     {
         public readonly IExampleAplicationService _ExampleAplicationService;

@@ -17,7 +17,6 @@ namespace Samtel.Api
             FilterConfig.RegisterGlobalFilters(GlobalConfiguration.Configuration.Filters);
             WebApiConfig.JsonFormater(GlobalConfiguration.Configuration);
             //LogFactory.GetLog("GENERAL").Info("START API");
-            //log4net.Config.XmlConfigurator.Configure();
         }
 
         protected void Session_Start(object sender, EventArgs e)
