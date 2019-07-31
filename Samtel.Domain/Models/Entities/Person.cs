@@ -11,5 +11,8 @@ namespace Samtel.Domain.Models.Entities
     {
         public string name { get; set; }
         public string surname { get; set; }
+        public int identification { get; set; }
+        public int age { get; set; }
+        public int sex { get; set; }
     }
 }
