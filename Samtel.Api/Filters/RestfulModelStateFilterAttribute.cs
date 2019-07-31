@@ -54,12 +54,12 @@ namespace Samtel.Api.Filters
 
                 if (errors != null && errors.Count > 0)
                 {
-                    IEnumerable<string> errorMessages = errors.Select(
+                   /* IEnumerable<string> errorMessages = errors.Select(
                         error => string.IsNullOrEmpty(error.ErrorMessage)
                             ? error.Exception?.Message ?? MissingPropertyError
-                            : error.ErrorMessage).ToArray();
+                            : error.ErrorMessage).ToArray();*/
 
-                    Errors.Add(key, errorMessages);
+                    Errors.Add(key, null);
                 }
             }
         }

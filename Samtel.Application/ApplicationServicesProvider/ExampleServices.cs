@@ -8,6 +8,7 @@ using Samtel.Application.ApplicationServices;
 using Samtel.Application.ApplicationServices.DTOs;
 using Samtel.Application.BusinessService;
 using Samtel.Application;
+using Samtel.Application.ApplicationServicesProvider.Assemblers;
 
 namespace Samtel.Application.ApplicationServicesProvider
 {
@@ -24,11 +25,11 @@ namespace Samtel.Application.ApplicationServicesProvider
 
         public IEnumerable<ExampleDTO> consultaSinVariable()
         {
-            IEnumerable<ExampleDTO> A = null;
+           /* IEnumerable<ExampleDTO> A = null;
+            s
+            var dataExample = _exampleRepository.metodoSinEntidadYSinVariables();*/
 
-            var dataExample = _exampleRepository.metodoSinEntidadYSinVariables();
-
-            return A;
+            return DTOAssembler.CreatePersons2(_exampleRepository.metodoSinEntidadYSinVariables());
         }
 
         public IEnumerable<ExampleDTO> consultaConVariable(string variableString, int variableInt)

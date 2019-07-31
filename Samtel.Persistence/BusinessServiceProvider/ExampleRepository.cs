@@ -21,12 +21,17 @@ namespace Samtel.Persistence.BusinessServiceProvider
 
         public IEnumerable<Person> metodoSinEntidadYSinVariables()
         {
+         
+            IEnumerable<Person> person = new List<Person>();
             //const string keyCache = "v1/payment-methods_GET";
             //if (_cacheService.Exists(keyCache)) return _cacheService.Get<IEnumerable<PaymentMethod>>(keyCache);
 
-            var testing = ExecuteStoreProcedure<Person>("sel_exampleTables");
+           // var testing = ExecuteStoreProcedure<Person>("sel_exampleTables");
+           person = Query<Person>("SELECT P.id, P.name, surname, age, identification, sex FROM person P").AsList();
+           // person = entity.people.SqlQuery("SELECT P.id, P.name, surname, age, identification, sex FROM person P ").ToList();
+            
             // _cacheService.Add(keyCache, paymentMethods);
-            return testing;
+            return person;
         }
 
         public IEnumerable<Person> metodoConEntidadConVariables(string variableString, int variableInt)
