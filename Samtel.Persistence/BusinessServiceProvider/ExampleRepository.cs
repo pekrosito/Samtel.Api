@@ -24,7 +24,7 @@ namespace Samtel.Persistence.BusinessServiceProvider
             //const string keyCache = "v1/payment-methods_GET";
             //if (_cacheService.Exists(keyCache)) return _cacheService.Get<IEnumerable<PaymentMethod>>(keyCache);
 
-            var testing = ExecuteStoreProcedure<Person>("sel_exampleTables");
+            var testing = Query<Person>("SELECT P.id, P.name, surname, age, identification, sex FROM person P ").AsList();
             // _cacheService.Add(keyCache, paymentMethods);
             return testing;
         }
