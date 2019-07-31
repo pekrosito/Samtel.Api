@@ -21,9 +21,10 @@ namespace Samtel.Application.ApplicationServicesProvider
             _requestContext = requestContext;
         }
 
+
         public PersonDTO getPersons()
         {
-            return DTOAssembler.CreatePerson(_personRepository.getPersons());
+            throw new NotImplementedException();
         }
     }
 }
