@@ -28,5 +28,36 @@ namespace Samtel.Api.Services.v1
         {
             return Request.CreateResponse(HttpStatusCode.OK, _clientAplicationService.getClients());
         }
+       
+        [HttpDelete]
+        [Route("delClientById/{id}")]
+        public HttpResponseMessage deleteClientById(int id)
+        {
+           //return Request.CreateResponse(HttpStatusCode.OK, "Hola");
+
+           /* if (_clientAplicationService.deleteClientById(id) == true)
+            {
+                return Request.CreateResponse(HttpStatusCode.OK, "aaaa");
+            }
+            else {
+                return Request.CreateResponse(HttpStatusCode.OK, "bbb");
+            }*/
+            return Request.CreateResponse(HttpStatusCode.Accepted, _clientAplicationService.deleteClientById(id));
+        }
+
+        // es tipo post poque le envio parametros
+        [HttpPost]
+        [Route("createClient")]
+        public HttpResponseMessage createClient(ClientDTO clientRequest)
+        {
+            return Request.CreateResponse(HttpStatusCode.Created, _clientAplicationService.createClient(clientRequest));
+        }
+
+        [HttpPut]
+        [Route("editClient/{id}")]
+        public HttpResponseMessage editClient(int id,  ClientDTO clientRequest)
+        {
+            return Request.CreateResponse(HttpStatusCode.Accepted, _clientAplicationService.editClient(id, clientRequest));
+        }
     }
 }

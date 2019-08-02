@@ -59,14 +59,14 @@ namespace Samtel.Application.ApplicationServicesProvider.Assemblers
         public static ClientDTO CreateClients2(Client client)
         {
                 ClientDTO clientDTO = new ClientDTO();
-                clientDTO.cod_naturaleza = client.s_codigo_naturaleza_cliente;
-                clientDTO.cod_tipo_dent = codigoTipoIdent(client);
-                clientDTO.cod_ocupacion = codigoOcupacion(client);
-                clientDTO.num_identificacion = client.s_numero_identificacion;
-                clientDTO.fecha_expedicion = client.d_fecha_expedicion;
-                clientDTO.lugar_expedicion = lugarExpedicion(client);
-                clientDTO.identificacionCliente = client.i_identificacion_cliente;
-                clientDTO.nombreCompleto = client.s_nombre_completo;
+                clientDTO.CodNaturaleza = client.s_codigo_naturaleza_cliente;
+                clientDTO.CodTipoIdentificacion = codigoTipoIdent(client);
+                clientDTO.CodOcupacion = codigoOcupacion(client);
+                clientDTO.NumIdentificacion = client.s_numero_identificacion;
+                clientDTO.Fechaexpedicion = client.d_fecha_expedicion;
+                clientDTO.LugarExpedicion = lugarExpedicion(client);
+                clientDTO.IdentificacionCliente = client.i_identificacion_cliente;
+                clientDTO.NombreCompleto = client.s_nombre_completo;
 
                 int count = client.s_nombre_completo.Split(' ').Count();
                 var completeName = client.s_nombre_completo.Split(' ');
@@ -164,6 +164,13 @@ namespace Samtel.Application.ApplicationServicesProvider.Assemblers
                 resultado = client.s_lugar_expedicion;
             }
             return resultado;
+        }
+
+
+
+        internal static ClientDTO delClientById(Client client)
+        {
+            return CreateClients2(client);
         }
     }
 }

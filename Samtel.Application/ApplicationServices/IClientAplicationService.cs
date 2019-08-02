@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Samtel.Application.ApplicationServices.DTOs;
+using Samtel.Domain.Models.Entities;
 
 namespace Samtel.Application.ApplicationServices
 {
@@ -11,5 +12,9 @@ namespace Samtel.Application.ApplicationServices
     {
       
         IEnumerable<ClientDTO> getClients();
+        Boolean deleteClientById(int id);
+
+        Boolean createClient(ClientDTO clientRequest);
+        Boolean editClient(int id, ClientDTO clientRequest);
     }
 }

@@ -9,14 +9,14 @@ namespace Samtel.Application.ApplicationServices.DTOs
 {
     public class ClientDTO
     {
-        public string cod_naturaleza { get; set; }
-        public string cod_tipo_dent { get; set; }
-        public string cod_ocupacion { get; set; }
-        public string num_identificacion { get; set; }
-        public string fecha_expedicion { get; set; }
-        public string lugar_expedicion { get; set; }
-        public int identificacionCliente { get; set; }
-        public string nombreCompleto { get; set; }
+        public string CodNaturaleza { get; set; }
+        public string CodTipoIdentificacion { get; set; }
+        public string CodOcupacion { get; set; }
+        public string NumIdentificacion { get; set; }
+        public string Fechaexpedicion { get; set; }
+        public string LugarExpedicion { get; set; }
+        public int IdentificacionCliente { get; set; }
+        public string NombreCompleto { get; set; }
 
         public CompanyDTO Company { get; set; }
 
