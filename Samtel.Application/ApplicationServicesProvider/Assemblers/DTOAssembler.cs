@@ -10,12 +10,25 @@ namespace Samtel.Application.ApplicationServicesProvider.Assemblers
 {
     public class DTOAssembler
     {
-        public static PersonDTO CreatePerson(Person person){
-
+        public static PersonDTO CreatePerson(Person person)
+        {
             return new PersonDTO
             {
-                apellido = person.surname
+                Nombre = person.name,
+                Apellido = person.surname
             };
+        }
+
+        public static List<PersonDTO> CreatePersons(List<Person> persons)
+        {
+            List<PersonDTO> personsDTO = new List<PersonDTO>();
+
+            foreach (Person person in persons)
+            {
+                personsDTO.Add(CreatePerson(person));
+            }
+
+            return personsDTO;
         }
     }
 }

@@ -56,7 +56,6 @@
   <ItemGroup>
     <Compile Include="ApplicationServicesProvider\PersonAplicationService.cs" />
     <Compile Include="ApplicationServicesProvider\SecurityService.cs" />
-    <Compile Include="ApplicationServices\DTOs\ExampleDTO.cs" />
     <Compile Include="ApplicationServicesProvider\Assemblers\DTOAssembler.cs" />
     <Compile Include="ApplicationServicesProvider\Assemblers\ModelAssembler.cs" />
     <Compile Include="ApplicationServicesProvider\ExampleServices.cs" />

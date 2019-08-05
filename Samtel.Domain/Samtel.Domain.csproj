@@ -45,7 +45,6 @@
     <Compile Include="Models\Base\IEntity.cs" />
     <Compile Include="Models\Config\Parameter.cs" />
     <Compile Include="Models\Entities\Person.cs" />
-    <Compile Include="Models\Entities\Test.cs" />
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\SystemType.cs" />
     <Compile Include="Models\User.cs" />
