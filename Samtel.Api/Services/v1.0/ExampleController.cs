@@ -39,21 +39,21 @@ namespace Samtel.Api.Services.v1
 
         [HttpPost]
         [Route("metodoPost")]
-        public HttpResponseMessage metodoPost(ExampleDTO personaRequest)
+        public HttpResponseMessage metodoPost(PersonDTO personaRequest)
         {
             return Request.CreateResponse(HttpStatusCode.Created, _ExampleAplicationService.metodoPost(personaRequest));
         }
 
         [HttpPut]
         [Route("metodoPutActualizar")]
-        public HttpResponseMessage metodoPut(ExampleDTO personaRequest)
+        public HttpResponseMessage metodoPut(PersonDTO personaRequest)
         {
             return Request.CreateResponse(HttpStatusCode.Accepted, _ExampleAplicationService.metodoPut(personaRequest));
         }
 
         [HttpDelete]
         [Route("metodoEliminar")]
-        public HttpResponseMessage metodoEliminar(ExampleDTO personaRequest)
+        public HttpResponseMessage metodoEliminar(PersonDTO personaRequest)
         {
             return Request.CreateResponse(HttpStatusCode.Accepted, _ExampleAplicationService.metodoEliminar(personaRequest));
         }

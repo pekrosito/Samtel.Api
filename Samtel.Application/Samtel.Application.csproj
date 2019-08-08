@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Samtel.Application</RootNamespace>
     <AssemblyName>Samtel.Application</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -56,7 +56,6 @@
   <ItemGroup>
     <Compile Include="ApplicationServicesProvider\PersonAplicationService.cs" />
     <Compile Include="ApplicationServicesProvider\SecurityService.cs" />
-    <Compile Include="ApplicationServices\DTOs\ExampleDTO.cs" />
     <Compile Include="ApplicationServicesProvider\Assemblers\DTOAssembler.cs" />
     <Compile Include="ApplicationServicesProvider\Assemblers\ModelAssembler.cs" />
     <Compile Include="ApplicationServicesProvider\ExampleServices.cs" />

@@ -15,18 +15,22 @@ namespace Samtel.Persistence.BusinessServiceProvider
     {
         private readonly RepositoryBase<Person> _RepositoryBase;
 
-        public ExampleRepository(IContext context, RequestContext requestContext): base(context, requestContext)
+        public ExampleRepository(IContext context, RequestContext requestContext) : base(context, requestContext)
         {
         }
 
-        public IEnumerable<Person> metodoSinEntidadYSinVariables()
+        public List<Person> metodoSinEntidadYSinVariables()
         {
             //const string keyCache = "v1/payment-methods_GET";
             //if (_cacheService.Exists(keyCache)) return _cacheService.Get<IEnumerable<PaymentMethod>>(keyCache);
 
-            var testing = ExecuteStoreProcedure<Person>("sel_exampleTables");
+            //var testing = ExecuteStoreProcedure<Person>("sel_exampleTables");
+            //var testing2 = Query<Test>("SELECT s_codigo_naturaleza_cliente FROM BIG_CLIENTES_TEMP P").AsList();
+
+            List<Person> persons = Query<Person>("SELECT name, surname, identification, age FROM person").AsList();
+
             // _cacheService.Add(keyCache, paymentMethods);
-            return testing;
+            return persons;
         }
 
         public IEnumerable<Person> metodoConEntidadConVariables(string variableString, int variableInt)
@@ -45,7 +49,7 @@ namespace Samtel.Persistence.BusinessServiceProvider
         public IEnumerable<dynamic> metodoDinamico(string variable)
         {
             var testing = Query<Person>("sel_exampleTables", CommandType.StoredProcedure);
-            //var testing = Query<EntityExample>("SELECT firstName, lastName, edad, id FROM exampleTables");
+
             return testing;
         }
 

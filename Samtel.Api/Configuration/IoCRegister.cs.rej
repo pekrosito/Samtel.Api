@@ -1,0 +1,9 @@
+diff a/Samtel.Api/Configuration/IoCRegister.cs b/Samtel.Api/Configuration/IoCRegister.cs	(rejected hunks)
+@@ -42,6 +42,7 @@
+             kernel.Bind<IExampleRepository>().To<ExampleRepository>().InRequestScope();
+             kernel.Bind<IParameterRepository>().To<Samtel.Persistence.BusinessServiceProvider.ParameterRepository>();
+             kernel.Bind<IUserRepository>().To<UserRepository>().InRequestScope();
++            kernel.Bind<ICreditRepository>().To<CreditRepository>().InRequestScope();
+         }
+ 
+         private static void RegisterModelService(IKernel kernel)
