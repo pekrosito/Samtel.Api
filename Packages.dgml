@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Samtel.Persistence" Label="Samtel.Persistence" Category="Project" />
+    <Node Id="Dapper 1.50.2" Label="Dapper 1.50.2" Category="Package" />
+    <Node Id="Dapper.Extension 1.0.0.1" Label="Dapper.Extension 1.0.0.1" Category="Package" />
+    <Node Id="DapperExtensions 1.6.3" Label="DapperExtensions 1.6.3" Category="Package" />
+    <Node Id="Samtel.Application" Label="Samtel.Application" Category="Project" />
+    <Node Id="log4net 2.0.8" Label="log4net 2.0.8" Category="Package" />
+    <Node Id="Postmark-Strong 2.2.1" Label="Postmark-Strong 2.2.1" Category="Package" />
+    <Node Id="System.Web.Http.Common 4.0.20126.16343" Label="System.Web.Http.Common 4.0.20126.16343" Category="Package" />
+    <Node Id="Samtel.Api" Label="Samtel.Api" Category="Project" />
+    <Node Id="Bootstrapper 2.0.3.13" Label="Bootstrapper 2.0.3.13" Category="Package" />
+    <Node Id="CommonServiceLocation 1.0.0" Label="CommonServiceLocation 1.0.0" Category="Package" />
+    <Node Id="CommonServiceLocator 2.0.1" Label="CommonServiceLocator 2.0.1" Category="Package" />
+    <Node Id="elmah 1.2.2" Label="elmah 1.2.2" Category="Package" />
+    <Node Id="Elmah.Contrib.WebApi 1.0.10.25" Label="Elmah.Contrib.WebApi 1.0.10.25" Category="Package" />
+    <Node Id="elmah.corelibrary 1.2.2" Label="elmah.corelibrary 1.2.2" Category="Package" />
+    <Node Id="FluentValidation 7.3.1" Label="FluentValidation 7.3.1" Category="Package" />
+    <Node Id="FluentValidation.WebApi 7.2.1" Label="FluentValidation.WebApi 7.2.1" Category="Package" />
+    <Node Id="Hangfire 1.6.17" Label="Hangfire 1.6.17" Category="Package" />
+    <Node Id="Hangfire.Core 1.6.17" Label="Hangfire.Core 1.6.17" Category="Package" />
+    <Node Id="Hangfire.Dashboard.Authorization 2.1.0" Label="Hangfire.Dashboard.Authorization 2.1.0" Category="Package" />
+    <Node Id="Hangfire.Ninject 1.2.0" Label="Hangfire.Ninject 1.2.0" Category="Package" />
+    <Node Id="Hangfire.SqlServer 1.6.17" Label="Hangfire.SqlServer 1.6.17" Category="Package" />
+    <Node Id="log4net 2.0.8" Label="log4net 2.0.8" Category="Package" />
+    <Node Id="Microsoft.AspNet.Cors 5.2.3" Label="Microsoft.AspNet.Cors 5.2.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.Identity.Core 2.2.1" Label="Microsoft.AspNet.Identity.Core 2.2.1" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi 5.2.3" Label="Microsoft.AspNet.WebApi 5.2.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 5.2.3" Label="Microsoft.AspNet.WebApi.Client 5.2.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 5.2.3" Label="Microsoft.AspNet.WebApi.Core 5.2.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.Cors 5.2.3" Label="Microsoft.AspNet.WebApi.Cors 5.2.3" Category="Package" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 5.2.3" Label="Microsoft.AspNet.WebApi.WebHost 5.2.3" Category="Package" />
+    <Node Id="Microsoft.Owin 3.1.0" Label="Microsoft.Owin 3.1.0" Category="Package" />
+    <Node Id="Microsoft.Owin.Host.SystemWeb 3.0.0" Label="Microsoft.Owin.Host.SystemWeb 3.0.0" Category="Package" />
+    <Node Id="Microsoft.Owin.Security 3.1.0" Label="Microsoft.Owin.Security 3.1.0" Category="Package" />
+    <Node Id="Microsoft.Owin.Security.Cookies 3.1.0" Label="Microsoft.Owin.Security.Cookies 3.1.0" Category="Package" />
+    <Node Id="Microsoft.Web.Infrastructure 1.0.0.0" Label="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package" />
+    <Node Id="Newtonsoft.Json 8.0.3" Label="Newtonsoft.Json 8.0.3" Category="Package" />
+    <Node Id="Ninject 3.3.4" Label="Ninject 3.3.4" Category="Package" />
+    <Node Id="Ninject.Web.Common 3.3.0" Label="Ninject.Web.Common 3.3.0" Category="Package" />
+    <Node Id="Ninject.Web.Common.WebHost 3.3.0" Label="Ninject.Web.Common.WebHost 3.3.0" Category="Package" />
+    <Node Id="Ninject.Web.WebApi 3.3.0" Label="Ninject.Web.WebApi 3.3.0" Category="Package" />
+    <Node Id="Ninject.Web.WebApi.WebHost 3.3.0" Label="Ninject.Web.WebApi.WebHost 3.3.0" Category="Package" />
+    <Node Id="Owin 1.0" Label="Owin 1.0" Category="Package" />
+    <Node Id="WebActivatorEx 2.2.0" Label="WebActivatorEx 2.2.0" Category="Package" />
+  </Nodes>
+  <Links>
+    <Link Source="Dapper.Extension 1.0.0.1" Target="Dapper 1.50.2" Category="Package Dependency" />
+    <Link Source="DapperExtensions 1.6.3" Target="Dapper 1.50.2" Category="Package Dependency" />
+    <Link Source="Samtel.Persistence" Target="Dapper.Extension 1.0.0.1" Category="Installed Package" />
+    <Link Source="Samtel.Persistence" Target="DapperExtensions 1.6.3" Category="Installed Package" />
+    <Link Source="Samtel.Application" Target="log4net 2.0.8" Category="Installed Package" />
+    <Link Source="Samtel.Application" Target="Postmark-Strong 2.2.1" Category="Installed Package" />
+    <Link Source="Samtel.Application" Target="System.Web.Http.Common 4.0.20126.16343" Category="Installed Package" />
+    <Link Source="elmah 1.2.2" Target="elmah.corelibrary 1.2.2" Category="Package Dependency" />
+    <Link Source="Elmah.Contrib.WebApi 1.0.10.25" Target="elmah.corelibrary 1.2.2" Category="Package Dependency" />
+    <Link Source="Elmah.Contrib.WebApi 1.0.10.25" Target="Microsoft.AspNet.WebApi.Core 5.2.3" Category="Package Dependency" />
+    <Link Source="FluentValidation.WebApi 7.2.1" Target="FluentValidation 7.3.1" Category="Package Dependency" />
+    <Link Source="FluentValidation.WebApi 7.2.1" Target="Microsoft.AspNet.WebApi.Core 5.2.3" Category="Package Dependency" />
+    <Link Source="Hangfire 1.6.17" Target="Hangfire.Core 1.6.17" Category="Package Dependency" />
+    <Link Source="Hangfire 1.6.17" Target="Hangfire.SqlServer 1.6.17" Category="Package Dependency" />
+    <Link Source="Hangfire 1.6.17" Target="Microsoft.Owin.Host.SystemWeb 3.0.0" Category="Package Dependency" />
+    <Link Source="Hangfire 1.6.17" Target="Hangfire.Core 1.6.17" Category="Package Dependency" />
+    <Link Source="Hangfire 1.6.17" Target="Hangfire.SqlServer 1.6.17" Category="Package Dependency" />
+    <Link Source="Hangfire.Core 1.6.17" Target="Owin 1.0" Category="Package Dependency" />
+    <Link Source="Hangfire.Core 1.6.17" Target="Newtonsoft.Json 8.0.3" Category="Package Dependency" />
+    <Link Source="Hangfire.Core 1.6.17" Target="Newtonsoft.Json 8.0.3" Category="Package Dependency" />
+    <Link Source="Hangfire.Dashboard.Authorization 2.1.0" Target="Owin 1.0" Category="Package Dependency" />
+    <Link Source="Hangfire.Dashboard.Authorization 2.1.0" Target="Hangfire.Core 1.6.17" Category="Package Dependency" />
+    <Link Source="Hangfire.Ninject 1.2.0" Target="Ninject 3.3.4" Category="Package Dependency" />
+    <Link Source="Hangfire.Ninject 1.2.0" Target="Hangfire.Core 1.6.17" Category="Package Dependency" />
+    <Link Source="Hangfire.SqlServer 1.6.17" Target="Hangfire.Core 1.6.17" Category="Package Dependency" />
+    <Link Source="Hangfire.SqlServer 1.6.17" Target="Hangfire.Core 1.6.17" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi 5.2.3" Target="Microsoft.AspNet.WebApi.WebHost 5.2.3" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.2.3" Target="Newtonsoft.Json 8.0.3" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.2.3" Target="Newtonsoft.Json 8.0.3" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 5.2.3" Target="Microsoft.AspNet.WebApi.Client 5.2.3" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Cors 5.2.3" Target="Microsoft.AspNet.WebApi.Core 5.2.3" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.Cors 5.2.3" Target="Microsoft.AspNet.Cors 5.2.3" Category="Package Dependency" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 5.2.3" Target="Microsoft.AspNet.WebApi.Core 5.2.3" Category="Package Dependency" />
+    <Link Source="Microsoft.Owin 3.1.0" Target="Owin 1.0" Category="Package Dependency" />
+    <Link Source="Microsoft.Owin.Host.SystemWeb 3.0.0" Target="Owin 1.0" Category="Package Dependency" />
+    <Link Source="Microsoft.Owin.Host.SystemWeb 3.0.0" Target="Microsoft.Owin 3.1.0" Category="Package Dependency" />
+    <Link Source="Microsoft.Owin.Security 3.1.0" Target="Owin 1.0" Category="Package Dependency" />
+    <Link Source="Microsoft.Owin.Security 3.1.0" Target="Microsoft.Owin 3.1.0" Category="Package Dependency" />
+    <Link Source="Microsoft.Owin.Security.Cookies 3.1.0" Target="Owin 1.0" Category="Package Dependency" />
+    <Link Source="Microsoft.Owin.Security.Cookies 3.1.0" Target="Microsoft.Owin 3.1.0" Category="Package Dependency" />
+    <Link Source="Microsoft.Owin.Security.Cookies 3.1.0" Target="Microsoft.Owin.Security 3.1.0" Category="Package Dependency" />
+    <Link Source="Ninject.Web.Common 3.3.0" Target="Ninject 3.3.4" Category="Package Dependency" />
+    <Link Source="Ninject.Web.Common 3.3.0" Target="Ninject 3.3.4" Category="Package Dependency" />
+    <Link Source="Ninject.Web.Common.WebHost 3.3.0" Target="Ninject.Web.Common 3.3.0" Category="Package Dependency" />
+    <Link Source="Ninject.Web.WebApi 3.3.0" Target="Microsoft.AspNet.WebApi.Core 5.2.3" Category="Package Dependency" />
+    <Link Source="Ninject.Web.WebApi 3.3.0" Target="Ninject.Web.Common 3.3.0" Category="Package Dependency" />
+    <Link Source="Ninject.Web.WebApi.WebHost 3.3.0" Target="Ninject.Web.WebApi 3.3.0" Category="Package Dependency" />
+    <Link Source="Ninject.Web.WebApi.WebHost 3.3.0" Target="Microsoft.AspNet.WebApi.WebHost 5.2.3" Category="Package Dependency" />
+    <Link Source="Ninject.Web.WebApi.WebHost 3.3.0" Target="Ninject.Web.Common.WebHost 3.3.0" Category="Package Dependency" />
+    <Link Source="WebActivatorEx 2.2.0" Target="Microsoft.Web.Infrastructure 1.0.0.0" Category="Package Dependency" />
+    <Link Source="Samtel.Api" Target="Bootstrapper 2.0.3.13" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="CommonServiceLocation 1.0.0" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="CommonServiceLocator 2.0.1" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="elmah 1.2.2" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="Elmah.Contrib.WebApi 1.0.10.25" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="FluentValidation.WebApi 7.2.1" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="Hangfire 1.6.17" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="Hangfire.Dashboard.Authorization 2.1.0" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="Hangfire.Ninject 1.2.0" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="log4net 2.0.8" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="Microsoft.AspNet.Identity.Core 2.2.1" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="Microsoft.AspNet.WebApi 5.2.3" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="Microsoft.AspNet.WebApi.Cors 5.2.3" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="Microsoft.Owin.Security.Cookies 3.1.0" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="Ninject.Web.WebApi.WebHost 3.3.0" Category="Installed Package" />
+    <Link Source="Samtel.Api" Target="WebActivatorEx 2.2.0" Category="Installed Package" />
+  </Links>
+  <Categories>
+    <Category Id="Project" />
+    <Category Id="Package" />
+  </Categories>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>
