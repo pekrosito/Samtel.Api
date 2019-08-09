@@ -60,11 +60,15 @@ namespace Samtel.Application.ApplicationServicesProvider.Assemblers
         {
                 ClientDTO clientDTO = new ClientDTO();
                 clientDTO.CodNaturaleza = client.s_codigo_naturaleza_cliente;
-                clientDTO.CodTipoIdentificacion = codigoTipoIdent(client);
-                clientDTO.CodOcupacion = codigoOcupacion(client);
+                clientDTO.CodTipoIdentificacion = client.s_codigo_tipo_ident;
+                // clientDTO.CodTipoIdentificacion = codigoTipoIdent(client);
+                clientDTO.CodOcupacion = client.i_codigo_ocupacion;
+                //clientDTO.CodOcupacion = codigoOcupacion(client);
                 clientDTO.NumIdentificacion = client.s_numero_identificacion;
                 clientDTO.Fechaexpedicion = client.d_fecha_expedicion;
-                clientDTO.LugarExpedicion = lugarExpedicion(client);
+                //clientDTO.LugarExpedicion = lugarExpedicion(client);
+                clientDTO.LugarExpedicion = client.s_lugar_expedicion;
+
                 clientDTO.IdentificacionCliente = client.i_identificacion_cliente;
                 clientDTO.NombreCompleto = client.s_nombre_completo;
 

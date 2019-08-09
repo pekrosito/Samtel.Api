@@ -53,7 +53,7 @@ namespace Samtel.Persistence.BusinessServiceProvider
                Boolean result = false;
              try
              {
-                 Query<Client>("INSERT INTO BIG_CLIENTES_TEMP (s_codigo_naturaleza_cliente,s_codigo_tipo_ident,i_codigo_ocupacion,s_numero_identificacion,d_fecha_expedicion,s_lugar_expedicion,i_identificacion_cliente,s_nombre_completo)  VALUES ( '"+clientRequest.s_codigo_naturaleza_cliente + "', '" + clientRequest.s_codigo_tipo_ident+ "', '" + clientRequest.i_codigo_ocupacion + "', '" + clientRequest.s_numero_identificacion + "', '" + clientRequest.d_fecha_expedicion + "', '" + clientRequest.s_lugar_expedicion + "', " + clientRequest.i_identificacion_cliente +",'"+ clientRequest.s_nombre_completo + "')" );
+                 Query<Client>("INSERT INTO BIG_CLIENTES_TEMP (s_codigo_naturaleza_cliente,s_codigo_tipo_ident,i_codigo_ocupacion,s_numero_identificacion,s_lugar_expedicion,i_identificacion_cliente,s_nombre_completo)  VALUES ( '"+clientRequest.s_codigo_naturaleza_cliente + "', '" + clientRequest.s_codigo_tipo_ident+ "', '" + clientRequest.i_codigo_ocupacion + "', '" + clientRequest.s_numero_identificacion + "', '" + clientRequest.s_lugar_expedicion + "', " + clientRequest.i_identificacion_cliente +",'"+ clientRequest.s_nombre_completo + "')" );
                                 
                 result = true;
              }
@@ -69,7 +69,7 @@ namespace Samtel.Persistence.BusinessServiceProvider
              Boolean result = false;
              try
              {
-                 Query<Client>("UPDATE BIG_CLIENTES_TEMP SET s_codigo_naturaleza_cliente = '" + clientRequest.s_codigo_naturaleza_cliente + "', s_codigo_tipo_ident = '"+ clientRequest.s_codigo_tipo_ident + "', i_codigo_ocupacion = '"+ clientRequest.i_codigo_ocupacion +"', s_numero_identificacion = '" + clientRequest.s_numero_identificacion+ "', d_fecha_expedicion = '"+ clientRequest.d_fecha_expedicion+"', s_lugar_expedicion = '"+ clientRequest.s_lugar_expedicion +"', s_nombre_completo ='"+ clientRequest.s_nombre_completo+"' where i_identificacion_cliente = " + clientRequest.i_identificacion_cliente);
+                 Query<Client>("UPDATE BIG_CLIENTES_TEMP SET s_codigo_naturaleza_cliente = '" + clientRequest.s_codigo_naturaleza_cliente + "', s_codigo_tipo_ident = '"+ clientRequest.s_codigo_tipo_ident + "', i_codigo_ocupacion = '"+ clientRequest.i_codigo_ocupacion +"', s_numero_identificacion = '" + clientRequest.s_numero_identificacion +"', s_lugar_expedicion = '"+ clientRequest.s_lugar_expedicion +"', s_nombre_completo ='"+ clientRequest.s_nombre_completo+"' where i_identificacion_cliente = " + clientRequest.i_identificacion_cliente);
 
                  result = true;
              }

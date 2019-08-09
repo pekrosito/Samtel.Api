@@ -13,7 +13,8 @@ namespace Samtel.Application.ApplicationServices.DTOs
         public string CodTipoIdentificacion { get; set; }
         public string CodOcupacion { get; set; }
         public string NumIdentificacion { get; set; }
-        public string Fechaexpedicion { get; set; }
+        public DateTime Fechaexpedicion { get; set; }
+
         public string LugarExpedicion { get; set; }
         public int IdentificacionCliente { get; set; }
         public string NombreCompleto { get; set; }

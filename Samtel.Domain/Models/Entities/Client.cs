@@ -13,7 +13,7 @@ namespace Samtel.Domain.Models.Entities
         public string s_codigo_tipo_ident { get; set; }
         public string i_codigo_ocupacion { get; set; }
         public string s_numero_identificacion { get; set; }
-        public string d_fecha_expedicion { get; set; }
+        public DateTime d_fecha_expedicion { get; set; }
         public string s_lugar_expedicion { get; set; }
         public int i_identificacion_cliente { get; set; }
         public string s_nombre_completo { get; set; }
