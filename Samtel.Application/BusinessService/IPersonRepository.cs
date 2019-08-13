@@ -9,6 +9,6 @@ namespace Samtel.Application.BusinessService
 {
     public interface IPersonRepository
     {
-        Person getPersons();
+        List<Person> getPersons();
     }
 }

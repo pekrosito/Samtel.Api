@@ -54,22 +54,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationServicesProvider\OcupationAplicationService.cs" />
+    <Compile Include="ApplicationServicesProvider\IdentificationAplicationService.cs" />
     <Compile Include="ApplicationServicesProvider\ClientAplicationService.cs" />
+    <Compile Include="ApplicationServicesProvider\CreditAplicationService.cs" />
     <Compile Include="ApplicationServicesProvider\PersonAplicationService.cs" />
     <Compile Include="ApplicationServicesProvider\SecurityService.cs" />
     <Compile Include="ApplicationServices\DTOs\ClientDTO.cs" />
     <Compile Include="ApplicationServices\DTOs\CompanyDTO.cs" />
+    <Compile Include="ApplicationServices\DTOs\CreditDTO.cs" />
     <Compile Include="ApplicationServices\DTOs\ExampleDTO.cs" />
     <Compile Include="ApplicationServicesProvider\Assemblers\DTOAssembler.cs" />
     <Compile Include="ApplicationServicesProvider\Assemblers\ModelAssembler.cs" />
     <Compile Include="ApplicationServicesProvider\ExampleServices.cs" />
+    <Compile Include="ApplicationServices\DTOs\OcupationDTO.cs" />
+    <Compile Include="ApplicationServices\DTOs\IdentificationDTO.cs" />
     <Compile Include="ApplicationServices\DTOs\PersonDTO.cs" />
     <Compile Include="ApplicationServices\DTOs\SessionDTO.cs" />
+    <Compile Include="ApplicationServices\IOcupationAplicationService.cs" />
+    <Compile Include="ApplicationServices\IIdentificationAplicationService.cs" />
     <Compile Include="ApplicationServices\IClientAplicationService.cs" />
+    <Compile Include="ApplicationServices\ICreditAplicationService.cs" />
     <Compile Include="ApplicationServices\IExampleAplicationService.cs" />
     <Compile Include="ApplicationServices\IPersonAplicationService.cs" />
     <Compile Include="ApplicationServices\ISecurityService.cs" />
+    <Compile Include="BusinessService\IOcupationRepository.cs" />
+    <Compile Include="BusinessService\IIdentificationRepository.cs" />
     <Compile Include="BusinessService\IClientRepository.cs" />
+    <Compile Include="BusinessService\ICreditRepository.cs" />
     <Compile Include="BusinessService\IParameterRepository.cs" />
     <Compile Include="BusinessService\IPersonRepository.cs" />
     <Compile Include="BusinessService\IUserRepository.cs" />

@@ -8,11 +8,9 @@ using System.Threading.Tasks;
 
 namespace Samtel.Application.BusinessService
 {
-   public interface IClientRepository : IRepository<Client>
+   public interface IIdentificationRepository : IRepository<Identification>
     {
-        List<Client> listClients();
-        bool createClient(Client client);
-        bool updateClient(Client client);
+        List<Identification> listIdentifications();
     }
 
 

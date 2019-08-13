@@ -21,9 +21,19 @@ namespace Samtel.Application.ApplicationServicesProvider
             _requestContext = requestContext;
         }
 
+        public bool createClient(ClientDTO client)
+        {
+            return _clientRepository.createClient(ModelAssembler.CreateClient(client));
+        }
+
         public List<ClientDTO> listClients()
         {
             return DTOAssembler.listClients(_clientRepository.listClients());
+        }
+
+        public bool updateClient(ClientDTO client)
+        {
+            return _clientRepository.updateClient(ModelAssembler.CreateClient(client));
         }
     }
 }

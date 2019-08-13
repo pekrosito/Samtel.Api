@@ -7,12 +7,9 @@ using System.Threading.Tasks;
 
 namespace Samtel.Application.ApplicationServices
 {
-   public interface IClientAplicationService
+   public interface IIdentificationAplicationService
     {
-       List<ClientDTO> listClients();
-
-        bool  createClient(ClientDTO client);
-        bool  updateClient(ClientDTO client);
+        List<IdentificationDTO> listIdentifications();
 
     }
 }

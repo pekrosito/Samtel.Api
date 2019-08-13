@@ -9,6 +9,6 @@ namespace Samtel.Application.ApplicationServices
 {
     public interface IPersonAplicationService
     {
-        PersonDTO getPersons();
+       List<PersonDTO> getPersons();
     }
 }

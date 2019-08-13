@@ -19,11 +19,44 @@ namespace Samtel.Persistence.BusinessServiceProvider
         {
         }
 
+        public bool createClient(Client client)
+        {
+            Boolean result = false;
+            try
+            {
+                Query<Client>("INSERT INTO BIG_CLIENTES_TEMP (s_codigo_naturaleza_cliente,s_codigo_tipo_ident,i_codigo_ocupacion,s_numero_identificacion,s_lugar_expedicion,i_identificacion_cliente,s_nombre_completo)  VALUES ( '" + client.s_codigo_naturaleza_cliente + "', '" + client.s_codigo_tipo_ident + "', '" + client.i_codigo_ocupacion + "', '" + client.s_numero_identificacion +  "', '" + client.s_lugar_expedicion + "', " + client.i_identificacion_cliente + ",'" + client.s_nombre_completo + "')");
+
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                result = false;
+            }
+            return result;
+        }
+
         public List<Client> listClients()
         {
             var testing = Query<Client>("SELECT * FROM BIG_CLIENTES_TEMP  ").ToList();
-            // _cacheService.Add(keyCache, paymentMethods);
             return testing;
+        }
+
+        public bool updateClient(Client client)
+        {
+            Boolean result = false;
+            try
+            {
+                Query<Client>("UPDATE BIG_CLIENTES_TEMP SET s_codigo_naturaleza_cliente = '" + client.s_codigo_naturaleza_cliente + "',s_codigo_tipo_ident = '" + client.s_codigo_tipo_ident + "', i_codigo_ocupacion = '" + client.i_codigo_ocupacion + "', s_numero_identificacion = '" + client.s_numero_identificacion + "', s_lugar_expedicion = '" + client.s_lugar_expedicion + "', s_nombre_completo = '" + client.s_nombre_completo + "' WHERE i_identificacion_cliente = " + client.i_identificacion_cliente );
+
+                result = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                result = false;
+            }
+            return result;
         }
     }
 }

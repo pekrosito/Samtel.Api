@@ -27,7 +27,8 @@ namespace Samtel.Api.Services.v1
         [Route("metodoGetSinVariable")]
         public HttpResponseMessage metodoGetSinVariable()
         {
-            return Request.CreateResponse(HttpStatusCode.OK, _ExampleAplicationService.consultaSinVariable());
+            List<PersonDTO> a = _ExampleAplicationService.consultaSinVariable();
+            return Request.CreateResponse(HttpStatusCode.OK, a);
         }
 
         [HttpGet]

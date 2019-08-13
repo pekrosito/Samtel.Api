@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Samtel.Application.ApplicationServices.DTOs
 {
-    public class PersonDTO
+   public class IdentificationDTO
     {
-        public string name { get; set; }
-        public string surname { get; set; }
-
-
+        public int id { get; set; }
+        public string identification { get; set; }
     }
 }

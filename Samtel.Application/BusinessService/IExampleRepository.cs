@@ -10,7 +10,7 @@ namespace Samtel.Application.BusinessService
 {
     public interface IExampleRepository : IRepository<Person>
     {
-        IEnumerable<Person> metodoSinEntidadYSinVariables();
+        List<Person> metodoSinEntidadYSinVariables();
         IEnumerable<dynamic> metodoDinamico(string variableString);
         IEnumerable<Person> metodoConEntidadConVariables(string variableString, int variableInt);
         Person Save(Person personaRequest);
