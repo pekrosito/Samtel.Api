@@ -43,6 +43,7 @@ namespace Samtel.Api.Configuration
             kernel.Bind<IParameterRepository>().To<Samtel.Persistence.BusinessServiceProvider.ParameterRepository>();
             kernel.Bind<IUserRepository>().To<UserRepository>().InRequestScope();
             kernel.Bind<IClientRepository>().To<ClientRepository>().InRequestScope();
+            kernel.Bind<IGeneralRepository>().To<GeneralRepository>().InRequestScope();
         }
 
         private static void RegisterModelService(IKernel kernel)
@@ -55,6 +56,7 @@ namespace Samtel.Api.Configuration
         {
             kernel.Bind<IExampleAplicationService>().To<ExampleServices>();
             kernel.Bind<IClientAplicationService>().To<ClientAplicationServicesService>();
+            kernel.Bind<IGeneralAplicationService>().To<GeneralAplicationServices>();
         }
 
         private static void RegisterApiController(IKernel kernel)

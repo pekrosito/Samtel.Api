@@ -64,5 +64,26 @@ namespace Samtel.Application.ApplicationServicesProvider.Assemblers
 
             return clientsDTO;
         }
+
+        public static List<GeneralDTO> CreateGenerals(List<General> businessCollections)
+        {
+            List<GeneralDTO> generalList = new List<GeneralDTO>();
+
+            foreach (General element in businessCollections)
+            {
+                generalList.Add(CreateGeneral(element));
+            }
+
+            return generalList;
+        }
+
+        public static GeneralDTO CreateGeneral(General element)
+        {
+            return new GeneralDTO()
+            {
+                Description = element.Description,
+                Id = element.Id
+            };
+        }
     }
 }

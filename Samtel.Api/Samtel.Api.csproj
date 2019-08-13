@@ -212,6 +212,7 @@
     <Compile Include="Security\AuthorizationAttribute.cs" />
     <Compile Include="Services\v1.0\ClientController.cs" />
     <Compile Include="Services\v1.0\ExampleController.cs" />
+    <Compile Include="Services\v1.0\GeneralController.cs" />
     <Compile Include="Services\v1.0\PersonController.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
