@@ -43,6 +43,7 @@ namespace Samtel.Persistence.BusinessServiceProvider
 
             var testing = ExecuteStoreProcedure<Person>("sel_example_con_parametros", parametros);
             // _cacheService.Add(keyCache, paymentMethods);
+
             return testing;
         }
 

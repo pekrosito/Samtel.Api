@@ -210,6 +210,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\AuthenticateAttribute.cs" />
     <Compile Include="Security\AuthorizationAttribute.cs" />
+    <Compile Include="Services\v1.0\ClientController.cs" />
     <Compile Include="Services\v1.0\ExampleController.cs" />
     <Compile Include="Services\v1.0\PersonController.cs" />
     <Compile Include="Startup.cs" />
@@ -227,6 +228,10 @@
     <ProjectReference Include="..\Samtel.Infraestructure\Samtel.Infraestructure.csproj">
       <Project>{39a4e98c-b4cd-4de6-8758-8b5806e0a771}</Project>
       <Name>Samtel.Infraestructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Samtel.Integration\Samtel.Integration.csproj">
+      <Project>{733d88b0-4179-496b-acbb-1828f5878872}</Project>
+      <Name>Samtel.Integration</Name>
     </ProjectReference>
     <ProjectReference Include="..\Samtel.Persistence\Samtel.Persistence.csproj">
       <Project>{58b8dd91-2694-48d4-9b11-fa719b3661f8}</Project>

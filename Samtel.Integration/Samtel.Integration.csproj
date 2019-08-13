@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{16997158-DD27-40D4-AFA7-AC9297BF4CBA}</ProjectGuid>
+    <ProjectGuid>{733D88B0-4179-496B-ACBB-1828F5878872}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Samtel.Domain</RootNamespace>
-    <AssemblyName>Samtel.Domain</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>Samtel.Integration</RootNamespace>
+    <AssemblyName>Samtel.Integration</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,17 +39,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Base\Entity.cs" />
-    <Compile Include="Models\Base\IAuditableEntity.cs" />
-    <Compile Include="Models\Base\IEntity.cs" />
-    <Compile Include="Models\Config\Parameter.cs" />
-    <Compile Include="Models\Entities\Client.cs" />
-    <Compile Include="Models\Entities\Person.cs" />
-    <Compile Include="Models\Session.cs" />
-    <Compile Include="Models\SystemType.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="IntegrationServicesProvider\IntegrationServices.cs" />
+    <Compile Include="IntegrationServices\IIntegrationServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

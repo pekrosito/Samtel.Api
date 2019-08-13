@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Samtel.Application.ApplicationServices.DTOs
 {
-    public class SessionDTO
+    public class SessionDTO : ClientDTO
     {
         public int user_id { get; set; }
         public string session_token { get; set; }
@@ -21,5 +21,7 @@ namespace Samtel.Application.ApplicationServices.DTOs
         public string user_name { get; set; }
         public string usertype { get; set; }
         public Int32 usertype_id { get; set; }
+
+        
     }
 }
