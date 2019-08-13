@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessServiceProvider\ClientRepository.cs" />
+    <Compile Include="BusinessServiceProvider\IdentificationRepository.cs" />
+    <Compile Include="BusinessServiceProvider\OcupationsRepository.cs" />
     <Compile Include="BusinessServiceProvider\ParameterRepository.cs" />
     <Compile Include="BusinessServiceProvider\PersonRepository.cs" />
     <Compile Include="BusinessServiceProvider\UserRepository.cs" />

@@ -42,8 +42,9 @@ namespace Samtel.Api.Configuration
             kernel.Bind<IExampleRepository>().To<ExampleRepository>().InRequestScope();
             kernel.Bind<IParameterRepository>().To<Samtel.Persistence.BusinessServiceProvider.ParameterRepository>();
             kernel.Bind<IUserRepository>().To<UserRepository>().InRequestScope();
-
+            kernel.Bind<IOcupationsRepository>().To<OcupationsRepository>().InRequestScope();
             kernel.Bind<IClientRepository>().To<ClientRepository>().InRequestScope();
+            kernel.Bind<IIdentificationRepository>().To<IdentificationRepository>().InRequestScope();
         }
 
         private static void RegisterModelService(IKernel kernel)
@@ -56,6 +57,8 @@ namespace Samtel.Api.Configuration
         {
             kernel.Bind<IExampleAplicationService>().To<ExampleServices>();
             kernel.Bind<IClientAplicationService>().To<ClientAplicationService>();
+            kernel.Bind<IOcupationsAplicationsService>().To<OcupationsAplicationsService>();
+            kernel.Bind < IIdentificationAplicationService>().To<IdentificationAplicationService>();
         }
 
         private static void RegisterApiController(IKernel kernel)

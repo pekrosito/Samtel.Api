@@ -27,7 +27,7 @@ namespace Samtel.Persistence.BusinessServiceProvider
 
             IEnumerable<Client> listClients = new List<Client>();
 
-            listClients = Query<Client>("SELECT s_codigo_naturaleza_cliente, s_codigo_tipo_ident,i_codigo_ocupacion,s_numero_identificacion,d_fecha_expedicion,s_lugar_expedicion,i_identificacion_cliente,s_nombre_completo FROM BIG_CLIENTES_TEMP").ToList();
+            listClients = Query<Client>("SELECT  top 5 s_codigo_naturaleza_cliente, s_codigo_tipo_ident,i_codigo_ocupacion,s_numero_identificacion,d_fecha_expedicion,s_lugar_expedicion,i_identificacion_cliente,s_nombre_completo FROM BIG_CLIENTES_TEMP").ToList();
                   
             return listClients;
         }

@@ -38,6 +38,12 @@ namespace Samtel.Application.ApplicationServicesProvider.Assemblers
             }
             return personList;
         }
+
+        internal static IEnumerable<OcupationsDTO> ConvertEntityaDtoOcupation(IEnumerable<Identification> enumerable)
+        {
+            throw new NotImplementedException();
+        }
+
         public static List<PersonDTO> CreatePersons(List<Person> person)
         {
             List<PersonDTO> personList = new List<PersonDTO>();
@@ -175,6 +181,43 @@ namespace Samtel.Application.ApplicationServicesProvider.Assemblers
         internal static ClientDTO delClientById(Client client)
         {
             return CreateClients2(client);
+        }
+
+        public static List<OcupationsDTO> ConvertEntityaDtoOcupation(IEnumerable<Ocupations> ocupations)
+        {
+            List<OcupationsDTO> ocupationsList = new List<OcupationsDTO>();
+            foreach (Ocupations element in ocupations)
+            {
+                ocupationsList.Add(convert(element));
+            }
+            return ocupationsList;
+        }
+        public static OcupationsDTO convert(Ocupations ocupations)
+        {
+
+            return new OcupationsDTO
+            {
+                id = ocupations.id,
+                description  = ocupations.ocupation         
+            };
+        }
+        public static List<OcupationsDTO> ConvertEntityaDtoOcupation2(IEnumerable<Identification> identifications)
+        {
+            List<OcupationsDTO> list = new List<OcupationsDTO>();
+            foreach (Identification element in identifications)
+            {
+                list.Add(convert2(element));
+            }
+            return list;
+        }
+        public static OcupationsDTO convert2(Identification identifications)
+        {
+
+            return new OcupationsDTO
+            {
+                id = identifications.id,
+                description = identifications.identification
+            };
         }
     }
 }

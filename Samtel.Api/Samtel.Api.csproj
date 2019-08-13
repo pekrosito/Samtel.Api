@@ -212,10 +212,14 @@
     <Compile Include="Security\AuthorizationAttribute.cs" />
     <Compile Include="Services\v1.0\ClientController.cs" />
     <Compile Include="Services\v1.0\ExampleController.cs" />
+    <Compile Include="Services\v1.0\IdentificationController.cs" />
+    <Compile Include="Services\v1.0\OcupationsController.cs" />
     <Compile Include="Services\v1.0\PersonController.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Samtel.Application\Samtel.Application.csproj">
       <Project>{0287c042-e437-4715-80bf-327a59001261}</Project>
