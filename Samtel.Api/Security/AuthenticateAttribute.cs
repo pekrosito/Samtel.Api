@@ -34,6 +34,7 @@ namespace Samtel.Api.Security
             {
                 //_log.Error("AutorizationException exception. Generate Error Response", exception);
                 context.ErrorResult = new UnauthorizedResult(new AuthenticationHeaderValue[0], context.Request);
+                Console.WriteLine(exception);
             }
             return Task.FromResult(0);
         }

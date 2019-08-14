@@ -63,7 +63,9 @@ namespace Samtel.Api.Configuration
 
             var options = new DashboardOptions
             {
+ // El tipo o el miembro están obsoletos
                 AuthorizationFilters = new[] { new ClaimsBasedAuthorizationFilter(ClaimTypes.Role, "Administrador") },
+// El tipo o el miembro están obsoletos
                 AppPath = configurationManager.UrlOffice()//ConfigurationManager.AppSettings["Office:urlBase"]//
             };
 

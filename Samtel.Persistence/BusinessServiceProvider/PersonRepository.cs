@@ -13,7 +13,7 @@ namespace Samtel.Persistence.BusinessServiceProvider
 {
     public class PersonRepository : RepositoryBase<Person>, IPersonRepository
     {
-         readonly RepositoryBase<Person> _RepositoryBase;
+         //readonly RepositoryBase<Person> _RepositoryBase;
 
          public PersonRepository(IContext context, RequestContext requestContext)
              : base(context, requestContext)

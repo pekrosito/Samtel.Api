@@ -13,7 +13,7 @@ namespace Samtel.Persistence.BusinessServiceProvider
 {
     public class ExampleRepository : RepositoryBase<Person>, IExampleRepository
     {
-        private readonly RepositoryBase<Person> _RepositoryBase;
+        //private readonly RepositoryBase<Person> _RepositoryBase;
 
         public ExampleRepository(IContext context, RequestContext requestContext) : base(context, requestContext)
         {
@@ -53,17 +53,17 @@ namespace Samtel.Persistence.BusinessServiceProvider
             return testing;
         }
 
-        public Person Save(Person personaRequest)
+        public new Person Save(Person personaRequest)
         {
             return base.Save(personaRequest);
         }
 
-        public Person Update(Person personaRequest)
+        public new Person Update(Person personaRequest)
         {
             return base.Update(personaRequest);
         }
 
-        public Person Delete(Person personaRequest)
+        public new Person Delete(Person personaRequest)
         {
             return base.Delete(personaRequest);
         }

@@ -37,10 +37,14 @@ namespace Samtel.Api.Configuration
         {
             kernel.Bind<IContext>().To<DapperContext>().InRequestScope();
             kernel.Bind<IUnitOfwork>().To<UnitOfWork>().InRequestScope();
-
             kernel.Bind(typeof(IRepository<>)).To(typeof(RepositoryBase<>)).InRequestScope();
             kernel.Bind<IExampleRepository>().To<ExampleRepository>().InRequestScope();
-            kernel.Bind<IParameterRepository>().To<Samtel.Persistence.BusinessServiceProvider.ParameterRepository>();
+            kernel.Bind<IOcupationRepository>().To<OcupationRepository>().InRequestScope();
+            kernel.Bind<ICreditRepository>().To<CreditRepository>().InRequestScope();
+            kernel.Bind<IClientRepository>().To<ClientRepository>().InRequestScope();
+            kernel.Bind<IIdentificationRepository>().To<IdentificationRepository>().InRequestScope();
+            kernel.Bind<IGeneralRepository>().To<GeneralRepository>().InRequestScope();
+            kernel.Bind<IParameterRepository>().To<ParameterRepository>();
             kernel.Bind<IUserRepository>().To<UserRepository>().InRequestScope();
         }
 
@@ -53,6 +57,11 @@ namespace Samtel.Api.Configuration
         private static void RegisterApplicationService(IKernel kernel)
         {
             kernel.Bind<IExampleAplicationService>().To<ExampleServices>();
+            kernel.Bind<IClientApplicationService>().To<ClientApplicationService>();
+            kernel.Bind<ICreditApplicationService>().To<CreditApplicationService>();
+           kernel.Bind<IOcupationApplicationService>().To<OcupationApplicationService>();
+           kernel.Bind<IIdentificationAplicationService>().To<IdentificationAplicationService>();
+           kernel.Bind<IGeneralApplicationService>().To<GeneralApplicationService>();
         }
 
         private static void RegisterApiController(IKernel kernel)

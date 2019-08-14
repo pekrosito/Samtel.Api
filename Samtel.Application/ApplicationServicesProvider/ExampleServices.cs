@@ -50,7 +50,7 @@ namespace Samtel.Application.ApplicationServicesProvider
             }
             catch (SqlException ex)
             {
-
+                Console.WriteLine(ex);
             }
 
             return true;
@@ -70,7 +70,7 @@ namespace Samtel.Application.ApplicationServicesProvider
             }
             catch (SqlException ex)
             {
-
+                Console.WriteLine(ex);
             }
 
             return true;
@@ -89,7 +89,7 @@ namespace Samtel.Application.ApplicationServicesProvider
             }
             catch (SqlException ex)
             {
-
+                Console.WriteLine(ex);
             }
 
             return true;

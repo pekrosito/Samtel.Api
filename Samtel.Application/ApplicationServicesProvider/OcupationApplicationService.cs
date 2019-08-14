@@ -10,20 +10,21 @@ using System.Threading.Tasks;
 
 namespace Samtel.Application.ApplicationServicesProvider
 {
-    public class ClientApplicationService :IClientApplicationService
+    public class OcupationApplicationService : IOcupationApplicationService
     {
-        private readonly IClientRepository _clientRepository;
+
+        private readonly IOcupationRepository _ocupationRepository;
         private readonly RequestContext _requestContext;
 
-        public ClientApplicationService (IClientRepository clientRepository,RequestContext requestContext)
+        public OcupationApplicationService(IOcupationRepository ocupationsRepository, RequestContext requestContext)
         {
-            _clientRepository = clientRepository;
+            _ocupationRepository = ocupationsRepository;
             _requestContext = requestContext;
         }
 
-        public List<ClientDTO> getClients()
+        public List<OcupationDTO> getOcupations()
         {
-           return DTOAssembler.listarClients(_clientRepository.getClients());
+            return DTOAssembler.listarOcupations(_ocupationRepository.getOcupations());
         }
     }
 }

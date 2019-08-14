@@ -89,7 +89,7 @@
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\packages\CommonServiceLocation.1.0.0\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -212,8 +212,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Security\AuthenticateAttribute.cs" />
     <Compile Include="Security\AuthorizationAttribute.cs" />
+    <Compile Include="Services\v1.0\ClientController.cs" />
     <Compile Include="Services\v1.0\CreditController.cs" />
     <Compile Include="Services\v1.0\ExampleController.cs" />
+    <Compile Include="Services\v1.0\GeneralController.cs" />
+    <Compile Include="Services\v1.0\IdentificationController.cs" />
+    <Compile Include="Services\v1.0\OcupationController.cs" />
     <Compile Include="Services\v1.0\PersonController.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

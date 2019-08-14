@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace Samtel.Persistence.BusinessServiceProvider
 {
-    public class CreditRepository : RepositoryBase<BigCrediPremium>, ICreditRepository
+    public class ClientRepository : RepositoryBase<Client>, IClientRepository
     {
-        //readonly RepositoryBase<BigCrediPremium> _RepositoryBase;
+        //private readonly RepositoryBase<Client> _RepositoryBase;
 
-        public CreditRepository(IContext context, RequestContext requestContext)
+        public ClientRepository(IContext context, RequestContext requestContext)
             : base(context, requestContext)
         {
         }
@@ -27,13 +27,11 @@ namespace Samtel.Persistence.BusinessServiceProvider
         //    return testing;
         //}
 
-        List<BigCrediPremium> ICreditRepository.getCredits()
+        List<Client> IClientRepository.getClients()
         {
-            var testing = Query<BigCrediPremium>("SELECT * FROM BIG_CREDIPREMIUM").ToList(); ;
+            List <Client> clientes = Query<Client>("SELECT TOP 15 * FROM BIG_CLIENTES_TEMP").ToList(); ;
             //var testing = Query<EntityExample>("SELECT firstName, lastName, edad, id FROM exampleTables");
-            return testing;
+            return clientes;
         }
     }
-
-
 }

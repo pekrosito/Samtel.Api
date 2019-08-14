@@ -23,7 +23,7 @@ namespace Samtel.Api.Services.v1
 
         [HttpGet]
         [Route("getClients")]
-        public HttpResponseMessage getPersons()
+        public HttpResponseMessage GetClients()
         {
             return Request.CreateResponse(HttpStatusCode.OK, _clientAplicationService.getClients());
         }

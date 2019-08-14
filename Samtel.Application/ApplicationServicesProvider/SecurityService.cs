@@ -10,7 +10,7 @@ using Samtel.Application.ApplicationServices;
 using Samtel.Resources.Common.Cryptography;
 using JsonConvert = Newtonsoft.Json.JsonConvert;
 using Samtel.Application.ApplicationServices.DTOs;
-using Samtel.Domain.Models;
+
 
 namespace Samtel.Application.ApplicationServicesProvider
 {

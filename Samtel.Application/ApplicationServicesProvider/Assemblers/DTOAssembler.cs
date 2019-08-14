@@ -14,8 +14,8 @@ namespace Samtel.Application.ApplicationServicesProvider.Assemblers
         {
             return new PersonDTO
             {
-                nombre = person.name,
-                apellido = person.surname
+                Nombre = person.name,
+                Apellido = person.surname
             };
         }
 
@@ -47,13 +47,113 @@ namespace Samtel.Application.ApplicationServicesProvider.Assemblers
         }
         public static List<CreditDTO> listarCredits(List<BigCrediPremium> listCredits)
         {
-            List<CreditDTO> _listClient = new List<CreditDTO>();
+            List<CreditDTO> _listCredit = new List<CreditDTO>();
 
             foreach (BigCrediPremium item in listCredits)
             {
-                _listClient.Add(CreateCredit(item));
+                _listCredit.Add(CreateCredit(item));
+            }
+            return _listCredit;
+        }
+
+        public static ClientDTO CreateClient(Client client)
+        {
+            return new ClientDTO
+            {
+               codigo_naturaleza_cliente = client.s_codigo_naturaleza_cliente,
+               codigo_ocupacion =client.i_codigo_ocupacion,
+               codigo_tipo_ident = client.s_codigo_tipo_ident,
+               fecha_expedicionn = client.d_fecha_expedicion,
+               identificacion_cliente = client.i_identificacion_cliente,
+               lugar_expedicion = client.s_lugar_expedicion,
+               nombre_completo = client.s_nombre_completo,
+               numero_identificacion = client.s_numero_identificacion
+            };
+        }
+        public static List<ClientDTO> listarClients(List<Client> listClients)
+        {
+            List<ClientDTO> _listClient = new List<ClientDTO>();
+
+            foreach (Client item in listClients)
+            {
+                _listClient.Add(CreateClient(item));
             }
             return _listClient;
+        }
+
+        public static OcupationDTO CreateOcupation(Ocupations ocupation)
+        {
+            return new OcupationDTO
+            {
+                id = ocupation.id,
+                ocupation = ocupation.ocupation
+
+            };
+        }
+        public static List<OcupationDTO> listarOcupations(List<Ocupations> listOcupations)
+        {
+            List<OcupationDTO> _listOcupation = new List<OcupationDTO>();
+
+            foreach (Ocupations item in listOcupations)
+            {
+                _listOcupation.Add(CreateOcupation(item));
+            }
+            return _listOcupation;
+        }
+        public static IdentificationDTO CreateIdentification(Identification identif)
+        {
+            return new IdentificationDTO
+            {
+                id = identif.id,
+                identificacion =identif.identification
+            };
+        }
+        public static List<IdentificationDTO> listarIdentifications(List<Identification> listIdentifications)
+        {
+            List<IdentificationDTO> _listIdentifications = new List<IdentificationDTO>();
+
+            foreach (Identification item in listIdentifications)
+            {
+                _listIdentifications.Add(CreateIdentification(item));
+            }
+            return _listIdentifications;
+        }
+        public static GeneralDTO CreateIdentification2(Identification identif)
+        {
+            return new GeneralDTO
+            {
+                id = identif.id,
+                description = identif.identification
+            };
+        }
+        public static List<GeneralDTO> listarIdentifications2(List<Identification> listIdentifications)
+        {
+            List<GeneralDTO> _listIdentifications = new List<GeneralDTO>();
+
+            foreach (Identification item in listIdentifications)
+            {
+                _listIdentifications.Add(CreateIdentification2(item));
+            }
+            return _listIdentifications;
+        }
+        public static GeneralDTO CreateOcupation2(Ocupations ocupation)
+        {
+            return new GeneralDTO
+            {
+                id = ocupation.id,
+                description = ocupation.ocupation
+
+            };
+        }
+        public static List<GeneralDTO> listarOcupations2(List<Ocupations> listOcupations)
+        {
+            List<GeneralDTO> _listOcupation = new List<GeneralDTO>();
+
+            foreach (Ocupations item in listOcupations)
+            {
+                _listOcupation.Add(CreateOcupation2(item));
+            }
+            return _listOcupation;
         }
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Samtel.Application.ApplicationServices.DTOs
 {
-    public class ExampleDTO
+    public class IdentificationDTO
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
+        public int id { get; set; }
+        public string identificacion { get; set; }
     }
 }
