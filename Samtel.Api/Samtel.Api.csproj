@@ -219,6 +219,7 @@
     <Compile Include="Services\v1.0\IdentificationController.cs" />
     <Compile Include="Services\v1.0\OcupationController.cs" />
     <Compile Include="Services\v1.0\PersonController.cs" />
+    <Compile Include="Services\v1.0\PruebaController.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup />
