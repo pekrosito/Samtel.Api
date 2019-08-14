@@ -38,7 +38,7 @@ namespace Samtel.Persistence.BusinessServiceProvider
 
         public List<Client> listClients()
         {
-            var testing = Query<Client>("SELECT * FROM BIG_CLIENTES_TEMP  ").ToList();
+            var testing = Query<Client>("SELECT TOP 15 * FROM BIG_CLIENTES_TEMP  ").ToList();
             return testing;
         }
 
