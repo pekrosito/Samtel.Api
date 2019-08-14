@@ -9,5 +9,6 @@ namespace Samtel.Api.Services.v1._0
 {
     public class PruebaController : ApiController
     {
+        /*Esta controlador se creo como prueba para manejo de Repositorios*/
     }
 }
