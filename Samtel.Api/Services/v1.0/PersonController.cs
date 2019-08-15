@@ -7,7 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace Samtel.Api.Services.v1._0
+namespace Samtel.Api.Services.v1
 {
     [RoutePrefix("v1/Person")]
     [Authenticate]
@@ -25,6 +25,7 @@ namespace Samtel.Api.Services.v1._0
         public HttpResponseMessage getPersons()
         {
             return Request.CreateResponse(HttpStatusCode.OK, _personAplicationService.getPersons());
+            
         }
     }
 }

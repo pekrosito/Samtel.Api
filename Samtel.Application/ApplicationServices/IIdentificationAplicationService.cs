@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Samtel.Application.ApplicationServices
 {
-    public interface IPersonAplicationService
+   public interface IIdentificationAplicationService
     {
-       List<PersonDTO> getPersons();
+        List<IdentificationDTO> listIdentifications();
+
     }
 }

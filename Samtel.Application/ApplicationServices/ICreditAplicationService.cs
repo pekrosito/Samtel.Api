@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 
 namespace Samtel.Application.ApplicationServices
 {
-    public interface IPersonAplicationService
+    public interface ICreditAplicationService
     {
-       List<PersonDTO> getPersons();
+        List<CreditDTO> listCredits();
+        bool metodoPost(CreditDTO credit);
+        bool metodoEliminar(int id);
+        bool metodoActualizar(CreditDTO credit,int id);
     }
 }

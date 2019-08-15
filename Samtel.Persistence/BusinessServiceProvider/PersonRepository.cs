@@ -19,10 +19,10 @@ namespace Samtel.Persistence.BusinessServiceProvider
              : base(context, requestContext)
         {
         }
-        public Person getPersons()
+
+        public List<Person> getPersons()
         {
-            Person testing = new Person();// ExecuteStoreProcedure<Person>("sel_exampleTables");
-            
+            var testing = Query<Person>("SELECT * FROM person").ToList();
             return testing;
         }
     }

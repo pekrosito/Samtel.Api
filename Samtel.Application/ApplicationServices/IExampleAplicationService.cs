@@ -9,7 +9,7 @@ namespace Samtel.Application.ApplicationServices
 {
     public interface IExampleAplicationService
     {
-        IEnumerable<ExampleDTO> consultaSinVariable();
+        List<PersonDTO> consultaSinVariable();
         IEnumerable<ExampleDTO> consultaConVariable(string variableString, int variableInt);
         bool metodoPost(ExampleDTO personaRequest);
         bool metodoPut(ExampleDTO personaRequest);

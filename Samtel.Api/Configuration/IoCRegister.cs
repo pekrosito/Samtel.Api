@@ -37,13 +37,16 @@ namespace Samtel.Api.Configuration
         {
             kernel.Bind<IContext>().To<DapperContext>().InRequestScope();
             kernel.Bind<IUnitOfwork>().To<UnitOfWork>().InRequestScope();
-
             kernel.Bind(typeof(IRepository<>)).To(typeof(RepositoryBase<>)).InRequestScope();
+            kernel.Bind<IClientRepository>().To<ClientRepository>().InRequestScope();
             kernel.Bind<IExampleRepository>().To<ExampleRepository>().InRequestScope();
+            kernel.Bind<ICreditRepository>().To<CreditRepository>().InRequestScope();
+            kernel.Bind<IPersonRepository>().To<PersonRepository>().InRequestScope();
+            kernel.Bind<IOcupationRepository>().To<OcupationRepository>().InRequestScope();
+            kernel.Bind<IIdentificationRepository>().To<IdentificationRepository>().InRequestScope();
             kernel.Bind<IParameterRepository>().To<Samtel.Persistence.BusinessServiceProvider.ParameterRepository>();
             kernel.Bind<IUserRepository>().To<UserRepository>().InRequestScope();
         }
-
         private static void RegisterModelService(IKernel kernel)
         {
             kernel.Bind<RequestContext>().To<RequestContext>().InRequestScope();
@@ -53,8 +56,12 @@ namespace Samtel.Api.Configuration
         private static void RegisterApplicationService(IKernel kernel)
         {
             kernel.Bind<IExampleAplicationService>().To<ExampleServices>();
+            kernel.Bind<IClientAplicationService>().To<ClientAplicationService>();
+            kernel.Bind<ICreditAplicationService>().To<CreditAplicationService>();
+            kernel.Bind<IPersonAplicationService>().To<PersonAplicationService>();
+            kernel.Bind<IIdentificationAplicationService>().To<IdentificationAplicationService>();
+            kernel.Bind<IOcupationAplicationService>().To<OcupationAplicationService>();
         }
-
         private static void RegisterApiController(IKernel kernel)
         {
             kernel.Bind<IConfigurationManager>().To<RestConfigurationManager>();
