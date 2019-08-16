@@ -47,6 +47,7 @@
     <Compile Include="Models\Entities\Client.cs" />
     <Compile Include="Models\Entities\Ocupation.cs" />
     <Compile Include="Models\Entities\Person.cs" />
+    <Compile Include="Models\Entities\tbl_reporte.cs" />
     <Compile Include="Models\Session.cs" />
     <Compile Include="Models\SystemType.cs" />
     <Compile Include="Models\User.cs" />

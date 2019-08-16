@@ -35,7 +35,7 @@ namespace Samtel.Api.Configuration
 
         private static void RegisterRepositories(IKernel kernel)
         {
-            kernel.Bind<IContext>().To<DapperContext>().InRequestScope();
+            kernel.Bind<IContext>().To<DapperContextMySql>().InRequestScope();
             kernel.Bind<IUnitOfwork>().To<UnitOfWork>().InRequestScope();
 
             kernel.Bind(typeof(IRepository<>)).To(typeof(RepositoryBase<>)).InRequestScope();
